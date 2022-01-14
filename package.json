@@ -1,0 +1,21 @@
+{
+  "name": "flashcards",
+  "version": "0.0.1",
+  "description": "Repo for my flashcards in markdown",
+  "main": "build.js",
+  "scripts": {
+    "start": "node build.js",
+    "build": "./go.sh",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Roger-Heathcote/flashcards.git"
+  },
+  "author": "Roger-Heathcote (github@technicalbloke.com)",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/Roger-Heathcote/flashcards/issues"
+  },
+  "homepage": "https://github.com/Roger-Heathcote/flashcards#readme"
+}
