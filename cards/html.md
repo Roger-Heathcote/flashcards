@@ -4,11 +4,9 @@ tags: flashcards
 
 # HTML Flashcards
 
-###### tags: flashcards
-
 ## What should the first line of a HTML5 webpage be
 
-```html=
+```html
 <!DOCTYPE html>
 ```
 

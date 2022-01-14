@@ -1,3 +1,7 @@
+---
+tags: flashcards
+---
+
 # React
 
 ## What is the basic syntax for a functional component

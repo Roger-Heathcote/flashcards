@@ -55,11 +55,11 @@ If the custom element has a slot element bythat name it is placed there e.g.
 
 By using the slotted pseudo element e.g.
 
-```css=
+
 ::slotted(span) {
     background: pink;
 }
-```
+
 
 ## How do you choose if custom element content is addressable by DOM queries once mounted
 
