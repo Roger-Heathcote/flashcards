@@ -126,3 +126,6 @@
 
     flex-basis: width
 
+## Explain the difference between `display: none` and `visibility: hidden`
+
+    `visibility: hidden` reserves space in the layout, making it better for some animation effects.
