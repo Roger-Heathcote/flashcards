@@ -7,12 +7,12 @@ tags: flashcards
 ## What CSS rule defines an animation and what is it's basic syntax
 
 @keyframes
-```css=
-@keyframes animationName {
-    0% { css properties  }
-    100% { css properties }
-}
-```
+
+    @keyframes animationName {
+        0% { css properties  }
+        100% { css properties }
+    }
+
 
 ## How do you apply an animation
 

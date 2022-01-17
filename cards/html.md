@@ -10,7 +10,7 @@ tags: flashcards
 <!DOCTYPE html>
 ```
 
-## How many H1 elements should you have on a page
+## How many H1 elements should you have in a page
 
 One per page OR, if you have sections, One per ```<section>```
 
@@ -30,7 +30,7 @@ One per page OR, if you have sections, One per ```<section>```
 
 ```<nav>```
 
-If there are several nav areas you shjoud add an ```aria-label``` for each e.g. main, breadcrumbs, footer etc
+If there are several nav areas you should add an ```aria-label``` for each e.g. main, breadcrumbs, footer etc
 
 ## What is the syntax for the audio element
 
