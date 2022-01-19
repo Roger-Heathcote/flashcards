@@ -6,20 +6,60 @@ tags: flashcards
 
 ## How do you create and populate a template element in Javascript
 
-```javascript=
+```javascript
 const template = document.createElement('template')
 template.innerHTML = `Hello World`
 ```
-
 
 ## How is a template node cloned
 
 template.content.cloneNode(true)
 
+## What class do you extend to create a custom element
 
-## Given a template element 'template' - whaty is the basic syntax for a custom component
+`HTMLElement`
 
-```javascript=
+## How is a shadow root created
+
+`elem.attachShadow({mode: "open"|"closed"})`
+
+## How is a shadow root populated from a given template
+
+`elem.shadowRoot.appendChild(template.content.cloneNode(true))`
+
+## How are custom components bound into the DOM
+
+customElements.define('tag-name', componentName
+
+
+## How are child elements passed into a custom component and how does the component specify where they go
+
+Anything between the custom element's tags is passed in to the component. The component uses the `<slot>` tag to decide where it goes
+
+
+## Explain named slots
+
+Children can specify a slot attribute e.g.
+
+`<p slot="heading">Bananas</p>`
+
+If the custom element has a slot element by that name it is placed there e.g.
+
+`<h1><slot name="heading></slot></h1>`
+
+
+## How can slotted content be styled
+
+By using the slotted pseudo element e.g.
+
+::slotted(span) {
+    background: pink;
+}
+
+
+## Given a template element 'template' - what is the basic syntax for a custom component
+
+```javascript
 class MyComponent extends HTMLElement {
   constructor() {
     super()
@@ -29,39 +69,7 @@ class MyComponent extends HTMLElement {
 }
 ```
 
-
-## How are custom components bound into the DOM
-
-customElements.define('tag-name', componentName
-
-
-## How are child elements passed into a custom component and how does the component specify where it goes
-
-Anything between the custom element's tags is passed in to the component. The component uses the <slot> tag to decide where it goes
-
-
-## Explain named slots
-
-Children can specify a slot attribute e.g.
-
-<p slot="heading">Bananas</p>
-
-If the custom element has a slot element bythat name it is placed there e.g.
-
-<h1><slot name="heading></slot></h1>
-
-
-## How can slotted content be styled
-
-By using the slotted pseudo element e.g.
-
-
-::slotted(span) {
-    background: pink;
-}
-
-
-## How do you choose if custom element content is addressable by DOM queries once mounted
+## How do you choose if custom element's content is addressable when mounted
 
 The mode property of the first argument to .attachShadow() is either "open" or "closed" e.g.
 
@@ -71,9 +79,32 @@ this.attachShadow({mode: "closed"})
 
 ## What methods can be used for event handler setup and teardown
 
-connectedCallback and disconnectedCallback
+`connectedCallback()` and `disconnectedCallback()`
 
 ## What method is run whenever your component's attributes are changed and what are it's parameters
 
 attributeChangedCallback(attributeName, previousValue, newValue)
 
+## How can you access a component instance's state or methods
+
+Just grab the node and use dot notation e.g.
+
+```javascript
+const elem = document.querySelect("my-element")
+console.log(elem.someProperty)
+elem.someMethod()
+```
+
+## How can you bind attributes to underlying properties / methods
+
+Use getters and setters on the attribute's underlying properties 
+In those getters/setters use this.getAttribute and this.setAttribute respectively
+
+## How can you access a custom node's DOM tree
+
+Use normal DOM methods on elem.shadowRoot, if it is open
+You can't if it's closed
+
+## How can you detect if a custom element's has gained and/or lost children
+
+Listen for the `'slotchange'` event, either on a particular `<slot>` or as it bubbles up to `.shadowRoot`
