@@ -6,7 +6,7 @@ tags: flashcards
 
 ## What is the syntax for a media query that applies to all media types
 
-```css
+```
 @media (feature: value){
     rule: {}
 }
@@ -14,7 +14,7 @@ tags: flashcards
 
 ## What is the syntax for a media query that applies only to screens
 
-```css
+```
 @media screen {
     rule: {}
 }
@@ -22,7 +22,7 @@ tags: flashcards
 
 ## How could you remove all `<aside>` elements from the flow for print media less than 18 inches wide
 
-```css
+```
 @media print and (min-width: 18in){
     aside { display:none }
 }
@@ -32,7 +32,7 @@ tags: flashcards
 
 Write a nested query...
 
-```css=
+```
 @media screen {
     @media (orientation: portrait), (max-width: 500px)
 }
@@ -42,7 +42,7 @@ Write a nested query...
 
 Use @import and put the media query at the end e.g.
 
-```css
+```
 @import "somesheet.css" print and (min-width: 8in);
 ```
 
@@ -67,11 +67,13 @@ matchMedia("media query string").matches
 
 matchMedia("media query string").addEventListener('change', handlerFunction)
 
+```
 function handlerFunction(event) {
-    console.log(event.handler.matches)
+    console.log(event.matches)
 }
+```
 
-## With the media feature `width` does the value include the width of the scrollbar
+## With the media feature "width", does the value include the width of the scrollbar
 
 Yes
 
