@@ -61,7 +61,7 @@
 
     closer
 
-## What property can be used to provide a background that fades between colors
+## What property draws a background that fades between colors in a particular direction.
 
     linear-gradient
 

@@ -28,7 +28,7 @@ tags: flashcards
 }
 ```
 
-## How could you write a media query for screen which is either portrait or has a width of less than 500px, without repeating any clauses.
+## How could you write a media query for screen which is either portrait OR has a width of less than 500px, without repeating any clauses.
 
 Write a nested query...
 

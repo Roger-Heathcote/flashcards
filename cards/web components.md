@@ -17,6 +17,8 @@ template.innerHTML = `Hello World`
 
 ## What class do you extend to create a custom element
 
+    HTMLElement
+
 ## Given a template element 'template' - what is the basic syntax for a custom component
 
 ```
