@@ -2,7 +2,7 @@
 tags: flashcards
 ---
 
-# HTML Flashcards
+# HTML
 
 ## What should the first line of a HTML5 webpage be
 
@@ -34,38 +34,43 @@ If there are several nav areas you should add an `aria-label` for each e.g. main
 
 ## What is the syntax for the audio element
 
-```
-    <audio controls loop>
-        <source src="" type="audio/mpeg">
-        <source src="" type="audio/ogg">    
-        Fallback text/link
-    </audio>
+```html
+<audio controls loop>
+    <source src="" type="audio/mpeg">
+    <source src="" type="audio/ogg">    
+    Fallback text/link
+</audio>
 ```
 
 ## What elements are used to wrap and label visual information
 
-```
-    <figure>
-    <figcaption>
+```html
+<figure>
+<figcaption>
 ```
 
 ## In a form, what attribute sets the POST URL
 
-`action`  e.g. `<form action="https://example.com">`
+action e.g. 
+```html
+<form action="https://example.com">
+```
 
 ## How do you make an input field mandatory
 
 Use the required attribute e.g.
 
-    <input name="name" type="text" required>
+```html
+<input name="name" type="text" required>
+```
 
-
-## How do you add example text or instructions to an input
+## How do you put example text or instructions within an input field
 
 Use the placeholder attribute e.g.
 
-    <input name="name" placeholder="Your name...">
-
+```javascript
+<input name="name" placeholder="Your name...">
+```
 
 ## In a select option, what attribute sets the text that is sent, and what attribute sets the default option
 
@@ -129,3 +134,19 @@ Use the spellcheck attribute.
 ## What tag can you use to display raw text, including spacing
 
 `<pre>`
+
+## What tags are used to show some text, with further text revealed upon clicking. What is this known as? What is it also a good idea to do when you use them/
+
+`<summary>` and `<details>`. This is known as "disclosure element". It is a good idea to set `<summary>`'s cursor to "pointer"
+
+```
+    <details>
+        <summary>What is brown and sticky?</summary>
+        A stick.
+    </details>
+
+    <style>
+        summary { cursor: pointer }
+    </style>
+```
+

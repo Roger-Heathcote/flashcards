@@ -2,7 +2,7 @@
 tags: flashcards
 ---
 
-# CSS Selector specificity flashcards
+# CSS Selector specificity
 
 ## Which is more specific "div span" or "div"
 
@@ -42,7 +42,7 @@ Obsoletes the double :not e.g. div:not(:not(#someId))
 
 002
 
-## Which is more selective "div:empty" or ".empty"
+## Which is more selective "div:empty" or ":empty"
 
 div:empty
 

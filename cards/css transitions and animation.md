@@ -2,7 +2,7 @@
 tags: flashcards
 ---
 
-# CSS Transitions and Animation Flashcards
+# CSS transitions and animation
 
 ## What CSS rule defines an animation and what is it's basic syntax
 

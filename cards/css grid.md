@@ -2,7 +2,7 @@
 tags: flashcards
 ---
 
-# CSS Grid Flashcards
+# CSS Grid
 
 ## What are the three basic properties used to define a grid
 

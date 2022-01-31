@@ -122,10 +122,14 @@
     flex-grow: >1
     flex-shrink: >1
 
-## How do you set the default size of a flex-box item
+## How do you set the default length of a flex-box item along the primary axis
 
-    flex-basis: width
+    flex-basis: 10em;
 
 ## Explain the difference between `display: none` and `visibility: hidden`
 
     `visibility: hidden` reserves space in the layout, making it better for some animation effects.
+
+## How do you change which cursor appears over your element
+
+    cursor: pointer;
