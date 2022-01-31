@@ -135,7 +135,7 @@ Use the spellcheck attribute.
 
 `<pre>`
 
-## What tags are used to show some text, with further text revealed upon clicking. What is this known as? What is it also a good idea to do when you use them/
+## What tags are used to show some content, with further content revealed upon clicking. What is this known as? What is it also a good idea to do when you use them?
 
 `<summary>` and `<details>`. This is known as "disclosure element". It is a good idea to set `<summary>`'s cursor to "pointer"
 
