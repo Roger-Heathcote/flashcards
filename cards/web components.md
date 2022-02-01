@@ -76,12 +76,20 @@ class MyComponent extends HTMLElement {
 }
 ```
 
-## How do you choose if custom element's content is addressable when mounted
+## How do you hide a custom element's contents fron Javascript
 
-The mode property of the first argument to .attachShadow() is either "open" or "closed" e.g.
+Pass { mode: "closed" } to .attachShadow() when creating the shadow root AND use private scope for the variable that references it.
 
-
-    this.attachShadow({mode: "closed"})
+```javascript
+class MyElem extends HTMLElemnet{
+    #root
+    constructor(){
+        super()
+        #root = this.attachShadow({mode: "closed"})
+        #root.innerHTML = "<h1>Contents can't be directly changed from outside now</h1>"
+    }
+}
+```
 
 
 ## What methods can be used for event handler setup and teardown
