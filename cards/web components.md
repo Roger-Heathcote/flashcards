@@ -117,8 +117,7 @@ In those getters/setters use this.getAttribute and this.setAttribute respectivel
 
 ## How can you access a custom node's DOM tree
 
-Use normal DOM methods on elem.shadowRoot, if it is open
-You can't if it's closed
+If it doesn't use shadow DOM you can just use normal DOM methods. If it has an open shadowRoot then you can run normal DOM methods on elem.shadowRoot. If the element has no shadowRoot property you may still be able to access it's internals (if the component has kept a public reference to the shadowRoot within itself somewhere) but that's almost certainly a bad idea, unless you are a security tester.
 
 ## How can you detect if a custom element's has gained and/or lost children
 
