@@ -53,3 +53,17 @@ tags: flashcards
 
     this.setState((st8)=>{someVar: st8.someVar+1})
 
+## How can you get a reference to a node/element declared within a functional component's render method.
+
+1. Import { useRef } from 'react'
+2. const myRef = useRef(null)
+3. Set the attribute `ref` on the element you want to that name e.g. <p ref={myRef}>Foo<p>
+4. myRef.current is null until the component is mounted, then it is a ref to the DOM node in question
+
+## How can you monitor and respond to changes in DOM nodes/elements
+
+Use the useEffect and useRef hooks together e.g.
+    
+useEffect(changeHandlerFunction, [myRef.current?.offsetHeight]
+
+
