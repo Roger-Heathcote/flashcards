@@ -16,7 +16,7 @@ $variable (dollar sign)
 
 A map.
 
-They are defined with parentheses e.g.
+They are defined with parentheses which contain CSS style key value pairs e.g.
 
 $myMap = (foo: red; bar: green;);
 
@@ -36,7 +36,9 @@ They are called partials
 
 They are regular scss files who's name starts with the underscore character _.
 
-They are imported with the @use keyword at the top of the file, and accessed via dot notation. The file name becomes the namepace.
+They are either imported with the @use keyword at the top of the file, and accessed via dot notation. The file name becoming the namepace. File is only ever imported once, no matter how many times it is @used. 
+
+OR they are imported directly into the main name space with @import
 
 ## How are sass mixins defined and consumed
 

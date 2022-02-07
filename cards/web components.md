@@ -8,7 +8,7 @@ tags: flashcards
 
 ```
 const template = document.createElement('template')
-template.innerHTML = `Hello World`
+template.innerHTML = "Hello World"
 ```
 
 ## How is a template node cloned
@@ -31,11 +31,9 @@ class MyComponent extends HTMLElement {
 }
 ```
 
-`elem.shadowRoot.appendChild(template.content.cloneNode(true))`
-
 ## How is the DOM told about web components
 
-    customElements.define('tag-name', componentName)
+    customElements.define('tag-name', componentClass)
 
 
 ## How are child elements passed into a custom component and how does the component specify where they go
@@ -51,7 +49,7 @@ Children can specify a slot attribute e.g.
 
 If the custom element has a slot element by that name it is placed there e.g.
 
-    <h1><slot name="heading></slot></h1>
+    <h1><slot name="heading"></slot></h1>
 
 
 ## How can slotted content be styled
